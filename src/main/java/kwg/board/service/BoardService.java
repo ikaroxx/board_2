@@ -85,6 +85,7 @@ public class BoardService {
 
         // 목록: id, writer, title, hits, createtime
         Page<BoardDTO> boardDTOS = boardEntities.map(board -> new BoardDTO(board.getId(), board.getBoardWriter(), board.getBoardTitle(), board.getBoardHits(), board.getCreatedTime()));
+        return boardDTOS;
 
     }
 }
